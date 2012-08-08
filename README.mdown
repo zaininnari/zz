@@ -11,10 +11,10 @@ zz - Util for PHP
 use zz\l10n\ja;
 
 number::arabic('二〇一二');
-// -> (int) 2012
+// -> (string) "2012"
 
 number::arabic('一億二千三百四十五万六千七百八十九');
-// -> (int) 123456789
+// -> (string) "123456789"
 ```
 
 コンセプト
@@ -31,6 +31,8 @@ number::arabic('一億二千三百四十五万六千七百八十九');
 http://blog.usoinfo.info/article/181276332.html
 
 オリジナルとの相違は以下の通りです。
+- 返り値を文字列とすることで、 PHP_INT_MAX を越える値を与えても精度を落とさないよう変更
+- 無量大数(10^68)までに対応
 - PHP 5.3 以降に対応
 - クラス化
 - デフォルトの文字エンコーディングを UTF-8 に変更
@@ -44,8 +46,6 @@ http://blog.usoinfo.info/article/181276332.html
 
 - PHP 5.3 以上
 
-※32bit 環境の場合、64bit 環境より小さい値で PHP_INT_MAX の制限により、
-float型にキャストされ精度が保てなくなるため注意
 
 作者
 ------
