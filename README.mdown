@@ -1,0 +1,58 @@
+zz - Util for PHP
+=============================
+
+[![Build Status](https://secure.travis-ci.org/zaininnari/zz.png)](http://travis-ci.org/#!/zaininnari/zz)
+
+使い方
+-----
+
+```php
+<?php
+use zz\l10n\ja;
+
+number::arabic('二〇一二');
+// -> (int) 2012
+
+number::arabic('一億二千三百四十五万六千七百八十九');
+// -> (int) 123456789
+```
+
+コンセプト
+-------------
+
+日本語の数字は、大きく以下の2種類あります。
+- 「二〇一二」と漢数字の位置が桁そのものを表すもの
+- 「1億2000万」と桁を表す漢字（十、百、千、万、億・・・等）と共に表すもの
+
+人間が判断するのは簡単ですが、プログラム上で実装すると処理が複雑になるため、
+ライブラリとしてまとめました。
+
+処理のアイデア及びソースの原型（以下オリジナルと称する）は以下のものを使用しています。
+http://blog.usoinfo.info/article/181276332.html
+
+オリジナルとの相違は以下の通りです。
+- PHP 5.3 以降に対応
+- クラス化
+- デフォルトの文字エンコーディングを UTF-8 に変更
+- mb_ereg_search_* 関数を preg_match 関数でリライト
+
+概要
+=====
+
+要求
+------------
+
+- PHP 5.3 以上
+
+※32bit 環境の場合、64bit 環境より小さい値で PHP_INT_MAX の制限により、
+float型にキャストされ精度が保てなくなるため注意
+
+作者
+------
+
+zaininnari ( https://github.com/zaininnari/zz )
+
+License
+-------
+
+MIT License
