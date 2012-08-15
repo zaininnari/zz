@@ -1,7 +1,7 @@
 {
     "name":"zz/zz",
     "description":"library for japanese",
-    "keywords":["japanese library"],
+    "keywords":["japanese library", "number", "kanji"],
     "homepage":"https://github.com/zaininnari/zz",
     "type":"library",
     "license":"MIT",
