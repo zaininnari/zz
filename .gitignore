@@ -1,4 +1,7 @@
 vendor
 composer.phar
 composer.lock
-.idea
+
+# JetBrains IntelliJ IDEA
+.idea/
+*.iml

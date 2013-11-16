@@ -2,6 +2,7 @@ zz - Utility for PHP
 =============================
 
 [![Build Status](https://secure.travis-ci.org/zaininnari/zz.png)](http://travis-ci.org/#!/zaininnari/zz)
+[![Coverage Status](https://coveralls.io/repos/zaininnari/zz/badge.png?branch=master)](https://coveralls.io/r/zaininnari/zz?branch=master)
 
 使い方
 -----
